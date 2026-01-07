@@ -1,26 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Shoprite SmartMart</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural-X VR Dashboard</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
-    <div class="vr-container animate__animated animate__fadeIn">
-        <div class="glass-card">
-            <div id="three-container"></div>
-            <h1 id="p-name">Loading...</h1>
-            <h2 id="p-price">R 0.00</h2>
-            <p>📍 Aisle: <span id="p-aisle">--</span></p>
-            <button class="btn-glow" onclick="addToBasket()">ADD TO BASKET</button>
+    <div class="background-overlay"></div>
+    
+    <div class="container">
+        <div class="card glass animate__animated animate__zoomIn">
+            <div class="badge animate__animated animate__fadeInDown animate__delay-1s">
+                INSTANT PICKUP
+            </div>
+
+            <div class="main-content">
+                <div class="visual-container">
+                    <div class="scanner-circle">
+                        <img src="https://i.ibb.co/vz6mD8F/vr-headset.png" alt="VR Headset" class="product-img">
+                        <div class="scan-line"></div>
+                    </div>
+                    <p class="label-text">AUTOSCAN: SCALE 1:1</p>
+                </div>
+
+                <div class="details-container">
+                    <span class="category-tag">PREMIUM COLLECTION</span>
+                    <h1 class="title">NEURAL-X <br> VR HEADSET</h1>
+                    <div class="price-box">
+                        R <span class="price">599.99</span>
+                    </div>
+
+                    <div class="selection-area">
+                        <p>SELECTION TINTS</p>
+                        <div class="tints">
+                            <div class="tint cyan active"></div>
+                            <div class="tint purple"></div>
+                            <div class="tint white"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mall-locator animate__animated animate__fadeInUp animate__delay-1s">
+                <div class="locator-box">
+                    <span class="icon">📍</span>
+                    <div>
+                        <p><strong>Found in:</strong></p>
+                        <p>Level 2, North Wing</p>
+                    </div>
+                </div>
+                <div class="aisle-tag">AISLE 14</div>
+            </div>
+
+            <div class="button-group">
+                <button class="btn btn-primary glow-cyan">RESERVE IN STORE</button>
+                <button class="btn btn-secondary glow-white">SYNC SPECS</button>
+            </div>
         </div>
     </div>
-    
-    <div class="chat-orb" onclick="location.href='chat.html'">💬</div>
 
-    <script type="importmap">
-        { "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js", "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/" } }
-    </script>
-    <script src="script.js" type="module"></script>
+    <script src="script.js"></script>
 </body>
 </html>
