@@ -1,54 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VR Product Experience | SmartMart</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>Shoprite SmartMart</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
-    <div class="vr-container">
-        <div class="orb orb-1"></div>
-        <div class="orb orb-2"></div>
-
-        <main class="product-card animate__animated animate__zoomIn">
-            <section class="visual-section">
-                <div class="badge">VIRTUAL ASSET</div>
-                <img src="" alt="Product" class="product-img floating" id="p-img">
-                <div class="scan-line"></div>
-            </section>
-
-            <section class="info-section">
-                <h1 class="product-title" id="p-title">LOADING...</h1>
-                <p class="description" id="p-desc">Retrieving neural data from encrypted servers...</p>
-                
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <span class="label" id="stat-label-1">SPEC 1</span>
-                        <span class="value" id="stat-val-1">--</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="label" id="stat-label-2">SPEC 2</span>
-                        <span class="value" id="stat-val-2">--</span>
-                    </div>
-                </div>
-
-                <div class="price-tag" id="p-price">$0.00</div>
-
-                <div class="actions">
-                    <button class="btn btn-primary" onclick="triggerScan()">INITIATE LINK</button>
-                </div>
-            </section>
-        </main>
-
-        <div class="wa-connector animate__animated animate__fadeInUp animate__delay-1s">
-            <div class="wa-tooltip">Ask Merchant a Question</div>
-            <a href="#" class="wa-btn" id="wa-link">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-            </a>
+    <div class="vr-container animate__animated animate__fadeIn">
+        <div class="glass-card">
+            <div id="three-container"></div>
+            <h1 id="p-name">Loading...</h1>
+            <h2 id="p-price">R 0.00</h2>
+            <p>📍 Aisle: <span id="p-aisle">--</span></p>
+            <button class="btn-glow" onclick="addToBasket()">ADD TO BASKET</button>
         </div>
     </div>
-    <script src="script.js"></script>
+    
+    <div class="chat-orb" onclick="location.href='chat.html'">💬</div>
+
+    <script type="importmap">
+        { "imports": { "three": "https://unpkg.com/three@0.160.0/build/three.module.js", "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/" } }
+    </script>
+    <script src="script.js" type="module"></script>
 </body>
 </html>
